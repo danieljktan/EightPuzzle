@@ -20,7 +20,7 @@ def dequeue(queue):
    while left <= length:
       #swap = right if right exists, and right is smaller than left
       swap = right if right <= length and queue[right][1] < queue[left][1] else left
-      if queue[i] < queue[swap]:
+      if queue[i][1] < queue[swap][1]:
          break
       queue[i], queue[swap] = queue[swap], queue[i]
       i = swap
